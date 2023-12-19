@@ -1,7 +1,5 @@
 import { Button, Form, Row, Col } from 'react-bootstrap';
 import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
-import { useBackend } from 'main/utils/useBackend';
 
 
 function TransactionsAuthorizeForm({ initialContents, submitAction, buttonLabel = "Create" }) {
@@ -16,14 +14,6 @@ function TransactionsAuthorizeForm({ initialContents, submitAction, buttonLabel 
     );
     // Stryker restore all
 
-    const navigate = useNavigate();
-    const {data: availableCredit, error: _error1, status: _status1} =
-    useBackend(
-      // Stryker disable next-line all : don't test internal caching of React Query
-      ["/api/homecontroller/availableCredit"],
-      { method: "GET", url: "/api/homecontroller/availableCredit" },
-      []
-    );
 
     
     

@@ -1,5 +1,5 @@
 import React from "react";
-import OurTable, { ButtonColumn } from "main/components/OurTable";
+import OurTable from "main/components/OurTable";
 
 export default function HomePostedOrSettledTable({ postedPaymentsAndSettledTransactions }) {
     // Stryker restore all 
