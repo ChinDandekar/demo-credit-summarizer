@@ -1,6 +1,6 @@
 import { Button, Form, Row, Col } from 'react-bootstrap';
 import { useForm } from 'react-hook-form'
-
+import { useNavigate } from 'react-router-dom'
 
 function TransactionsAuthorizeForm({ initialContents, submitAction, buttonLabel = "Create" }) {
 
@@ -14,7 +14,7 @@ function TransactionsAuthorizeForm({ initialContents, submitAction, buttonLabel 
     );
     // Stryker restore all
 
-
+    const navigate = useNavigate();
     
     
     // For explanation, see: https://stackoverflow.com/questions/3143070/javascript-regex-iso-datetime
